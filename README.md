@@ -1,38 +1,95 @@
-# ⚛️ React Creative Starter
+# 📝 CrumpList - The Satisfying Todo App
 
-> 一个为创意交互项目打造的轻量级 React + Vite + TailwindCSS 起始模板。
-> 纯净、快速，开箱即用。
+> Don't just check it, **crush it**.
+> 别只是打钩，**粉碎它**。
 
-![React](https://img.shields.io/badge/-React-61DAFB?style=flat&logo=react&logoColor=black)
-![Vite](https://img.shields.io/badge/-Vite-646CFF?style=flat&logo=vite&logoColor=white)
-![TailwindCSS](https://img.shields.io/badge/-TailwindCSS-06B6D4?style=flat&logo=tailwindcss&logoColor=white)
+**CrumpList** is a creative productivity tool that turns your boring todo list into a stress-relief game. Instead of simply checking off tasks, you get to physically "crush" them into a paper ball and throw them away with satisfying animations and sound effects.
 
-## ✨ 特性 (Features)
+**CrumpList** 是一个极具创意的效率工具，它将枯燥的待办清单变成了一场解压游戏。你不再只是简单地勾选任务，而是可以将它们像废纸一样“揉碎”，伴随着爽快的动画和音效扔进垃圾桶。
 
-- **⚡️ 极速构建**: 基于 Vite 5，秒级启动。
-- **🎨 样式引擎**: 预装 TailwindCSS v3，已配置好 PostCSS。
-- **🧹 代码规范**: 集成 Prettier + Prettier-Plugin-TailwindCSS，保存自动格式化且类名自动排序。
-- **🛠 纯净环境**: 移除了 Vite 默认的计数器和多余样式，直接开始写代码。
-- **📂 路径别名**: 配置了 `@` 指向 `src` 目录 (见下文配置建议)。
+---
 
-## 🚀 如何使用 (How to use)
+## ✨ Features (功能特性)
 
-### 方式 A：通过 GitHub Template (推荐)
+- **💥 Stress-Relief Interaction (解压交互)**
 
-点击右上角的 **"Use this template"** 绿色按钮，创建一个新的仓库即可。
+  - Double-click a note to crush it!
+  - Includes sound effects, paper-crumpling animations, and celebratory fireworks (`canvas-confetti`).
+  - 双击便签即可粉碎！包含音效、揉纸动画以及庆祝烟花特效。
 
-### 方式 B：克隆仓库
+- **🖱️ Drag & Drop (自由拖拽)**
 
-```bash
-# 1. 克隆
-git clone [你的仓库地址] my-new-project
+  - Organize your messy desk by dragging notes anywhere.
+  - Random rotation and positioning for a natural, realistic feel.
+  - 自由拖拽整理你的“桌面”，便签生成时带有随机旋转角度和位置，拟真感十足。
 
-# 2. 进入目录
-cd my-new-project
+- **🎨 Handwritten Aesthetic (手写风格)**
 
-# 3. 安装依赖
-npm install
+  - Powered by Google Fonts "Caveat" for that authentic sticky note look.
+  - Tailwind CSS styling with Glassmorphism input bar.
+  - 采用 Caveat 字体模拟手写质感，配合毛玻璃风格的输入栏。
 
-# 4. 启动开发服务器
-npm run dev
+- **💾 Auto-Save (自动保存)**
+
+  - All tasks and positions are persisted to `LocalStorage`.
+  - 所有任务内容及其位置都会自动保存到本地存储，刷新页面不丢失。
+
+- **🛠️ Productivity Emojis (效率表情包)**
+  - Curated emoji picker specifically for to-do contexts (📅, ✅, 🔥, etc.).
+  - 专为待办事项精选的 Emoji 列表，拒绝无效社交表情。
+
+---
+
+## 🛠️ Tech Stack (技术栈)
+
+- **Core:** React 18 + Vite
+- **Styling:** Tailwind CSS
+- **Animation:** CSS Keyframes & `canvas-confetti`
+- **Font:** Google Fonts (Caveat)
+
+---
+
+## 🚀 Getting Started (如何运行)
+
+1. **Clone the repository (克隆项目)**
+
+   ```bash
+   git clone https://github.com/kogorou0105-bit/crumplist.git
+   cd crumplist
+   ```
+
+2. **Install dependencies (安装依赖)**
+
+   ```bash
+   npm install
+   ```
+
+3. **Run locally (本地运行)**
+
+   ```bash
+   npm run dev
+   ```
+
+4. **Build for production (打包部署)**
+
+   ```bash
+   npm run build
+   ```
+
+---
+
+## 📂 Project Structure (项目结构)
+
+```text
+src/
+├── components/
+│   ├── Note.jsx        # Sticky note component (Drag & Crush logic) / 便签组件
+│   ├── InputBar.jsx    # Glassmorphism input area / 底部输入栏
+│   └── EmojiPicker.jsx # Custom emoji selector / 表情选择器
+├── utils/
+│   └── storage.js      # LocalStorage helper / 本地存储工具
+├── App.jsx             # Main logic & State management / 主逻辑
+└── index.css           # Global styles & Tailwind imports / 全局样式
+public/
+└── crush.mp3           # Sound effect file / 粉碎音效文件
 ```

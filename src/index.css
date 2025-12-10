@@ -1,1 +1,82 @@
 @import "tailwindcss";
+
+/* 1. 定义自定义字体工具类 */
+@layer utilities {
+  .font-caveat {
+    font-family: "Caveat", cursive, sans-serif;
+  }
+}
+
+@theme {
+  --font-cursive: "Caveat", cursive, sans-serif;
+}
+
+body {
+  font-family: var(--font-cursive);
+  overflow: hidden; /* 防止滚动 */
+}
+
+/* 自定义类：桌面纹理 */
+.bg-desk {
+  background-color: #d8cfc4;
+  background-image: linear-gradient(
+      45deg,
+      #d0c6ba 25%,
+      transparent 25%,
+      transparent 75%,
+      #d0c6ba 75%,
+      #d0c6ba
+    ),
+    linear-gradient(
+      45deg,
+      #d0c6ba 25%,
+      transparent 25%,
+      transparent 75%,
+      #d0c6ba 75%,
+      #d0c6ba
+    );
+  background-position: 0 0, 10px 10px;
+  background-size: 20px 20px;
+}
+
+/* 粉碎动画 */
+@keyframes crush-and-toss {
+  0% {
+    transform: scale(1) rotate(var(--rotate-deg));
+    background-color: var(--bg-color-dynamic);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  }
+  40% {
+    transform: scale(0.5) rotate(calc(var(--rotate-deg) + 45deg));
+    background-color: #d7ccc8;
+    border-radius: 50%;
+    box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.2);
+  }
+  100% {
+    transform: scale(0) translateY(800px);
+    opacity: 0;
+  }
+}
+
+.is-crushing {
+  pointer-events: none;
+  box-shadow: none !important;
+  background: none !important; /* 让背景变透明，通过动画控制颜色 */
+  animation: crush-and-toss 0.6s ease-in forwards;
+}
+
+/* Emoji 弹出动画 */
+@keyframes staggerPop {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-staggerPop {
+  animation: staggerPop 0.3s ease-out;
+}
