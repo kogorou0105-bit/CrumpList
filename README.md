@@ -40,6 +40,12 @@
 
 ---
 
+## 🔗 在线演示 (Live Demo)
+
+**[👉 点击这里查看在线演示](https://kogorou0105-bit.github.io/CrumpList/)**
+
+---
+
 ## 🛠️ Tech Stack (技术栈)
 
 - **Core:** React 18 + Vite
@@ -54,7 +60,7 @@
 1. **Clone the repository (克隆项目)**
 
    ```bash
-   git clone https://github.com/kogorou0105-bit/crumplist.git
+   git clone https://github.com/kogorou0105-bit/CrumpList
    cd crumplist
    ```
 
